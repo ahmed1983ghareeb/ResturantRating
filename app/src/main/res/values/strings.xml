@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Resturant Rating</string>
+    <string-array name="meals">
+        <item>Burger</item>
+        <item>Pizza</item>
+        <item>Fried chicken</item>
+        <item>Wrap</item>
+    </string-array>
+</resources>

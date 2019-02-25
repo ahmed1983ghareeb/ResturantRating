@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Client">
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/btnFinish"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="save rating" />
+
+    <TextView
+        android:id="@+id/textViewMeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meal"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Spinner
+        android:id="@+id/spinnerMeal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/textViewMeal"
+        app:layout_constraintLeft_toRightOf="@id/textViewMeal"
+        android:layout_marginLeft="70dp"
+        android:entries="@array/meals"
+        />
+
+    <TextView
+        android:id="@+id/textViewPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Picture"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="@id/textViewMeal"
+        app:layout_constraintTop_toBottomOf="@id/textViewMeal"
+        android:layout_marginTop="30sp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/burger"
+        android:layout_marginTop="70dp"
+        app:layout_constraintLeft_toRightOf="@id/textViewPicture"
+        app:layout_constraintTop_toTopOf="@id/textViewPicture"/>
+
+    <TextView
+        android:id="@+id/textViewRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="@id/textViewMeal"
+        app:layout_constraintTop_toBottomOf="@id/textViewPicture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="30sp"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/textViewRate"
+        app:layout_constraintTop_toTopOf="@id/textViewRate"
+        android:numStars="5"
+        android:stepSize="0.5"/>
+
+    <Button
+        android:id="@+id/btnFinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="finish"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/textViewMeal"/>
+</android.support.constraint.ConstraintLayout>
